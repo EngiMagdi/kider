@@ -1,0 +1,987 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playball&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* nav */
+.nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(201, 154, 141, 0.9);  
+      /* background-color:rgba(105, 93, 89,.9); */
+       height: 80px;
+    /* overflow: auto; */
+    padding: 15px  20px ;
+
+}
+/* .nav-left */
+.nav-left{
+float: left;
+position: relative;
+padding: 0 30px;
+}
+
+/* book-icon  */
+.nav-left .book-icon{
+    font-weight:600;
+    font-size:40px;
+    color:rgb(68, 41, 32);
+}
+/* input */
+.nav-left input{
+    margin-left: 20px;
+    padding: 12px;
+    width: 250px;
+    border-radius: 15px;
+    border: none; 
+    margin-top: -3px;
+   background-color:rgb(163, 141, 134)  ;
+   /* background-color:rgb(196, 176, 171);; */
+    }
+
+/* search-icon */
+.nav-left .search-icon{
+    position: absolute;
+    top: 22px ;
+    left: 110px;
+    color:rgb(68, 41, 32)
+}
+
+/* nav-right */
+.nav-right{
+    float: right;
+    padding: 10px 0;
+}
+/* main-list */
+.nav-right .main-list{ list-style: none;}
+
+.nav-right .main-list li{
+    position: relative;
+    display: inline;
+    font-weight:600;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.nav-right .main-list a{
+    text-decoration: none;
+    color:rgb(68, 41, 32)
+}
+.nav-right .main-list li::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    background-color: rgb(128, 103, 93);
+    transition: .4s;
+
+}
+.nav-right .main-list li:hover::after{
+    width: 100%;
+    right: 0px;
+}
+
+/* neasted-list */
+.neasted-list{
+    position: absolute;
+    visibility: hidden;
+    padding: 20px;
+    background-color:rgb(207, 174, 163);
+    border-radius: 10px;
+    left: 0;
+    top: 170%;
+    margin-top:10px ;
+    transition: .3s;
+    z-index: 300;
+}
+.neasted-list li{ display: block;}
+.neasted-list a{line-height: 50px;}
+
+/* visible neasted list on hover */
+.price:hover .neasted-list {visibility:visible;}
+
+
+/* ///////////////////////////////////////////////////// */
+/* header */
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/footer-bg.jpg);
+    background-size:cover;
+    position: relative;
+}
+/* .headerLayer */
+.header .headerLayer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255 ,.3);
+    z-index: -1;
+}
+/* headerLayer .container */
+.header .headerLayer .container{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%  , -50%);
+    text-align: center;
+}
+/*  headerLayer h1 ==>title */
+.header .headerLayer .container h1{
+    font-size: 72px;
+    text-transform: capitalize;
+    font-family: "Playball", 'cursive'; 
+    color:rgb(160, 48, 14);
+}
+.header .headerLayer .container p{
+    font-weight: 500;
+    font-size: 21px;
+    padding: 10px 0;
+   color:rgb(107, 97, 94)
+}
+   
+   /*  headerLayer button */
+.header .headerLayer .container button{
+    width: 150px;
+    font-family: "Playball", 'cursive';
+    padding:   15px 30px ;
+    border-radius: 25px;
+    margin: 20px 10px ;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 1;
+    color: white;
+   
+}
+
+/* .learn-btn */
+.header .headerLayer .learn-btn{
+    background-color: rgb(232, 91, 50);
+    border: 1px solid  rgb(232, 91, 50); 
+   
+}
+/* classes-btn */
+.header .headerLayer .classes-btn{
+    background-color:rgb(128, 103, 93);
+    border: 1px solid rgb(128, 103, 93) ;
+}
+/* headerLayer button:hover */
+.header .headerLayer button:hover{opacity: .8; }
+
+/* ////////////////////////////////////////////////////////////////// */
+/* h2 in website  ==>title of section have the same propetry */
+h2{
+    text-align: center ;
+    padding: 20px;
+    text-transform: capitalize;
+     font-weight: 700;
+     font-size: 40px;
+     font-family: "Playball", 'cursive';
+     position: relative;
+}
+ h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%  , -50%);
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: rgb(232, 91, 50) ;
+}
+/* /////////////////////////////////////////// */
+
+/* school-facilites */
+.school-facilites {padding: 40px;}
+
+/* .schoolFacilitesContainer */
+.schoolFacilitesContainer{
+    width: 80%;
+    margin: auto;
+    padding: 50px 0px ;
+    overflow:auto;
+}
+/* .schoolFacilitesBoxesChild */
+.schoolFacilitesContainer .schoolFacilitesBoxesChild{
+    width: 30%; 
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    border: 2px solid  rgb(232, 91, 50);
+    float: left;
+    position: relative;
+
+}
+/* .schoolFacilitesChild2 ==>center div */
+.schoolFacilitesContainer  .schoolFacilitesChild2 {margin: 0 5%;}
+/* icon in schoolFacilitesBoxesChild */
+.schoolFacilitesContainer  .schoolFacilitesBoxesChild  i{
+    font-weight: 900;
+    font-size: 48px;
+    opacity: .6;
+    color: rgb(232, 91, 50);
+}
+/* h4 in schoolFacilitesBoxesChild */
+.schoolFacilitesContainer .schoolFacilitesBoxesChild  h4{
+    padding: 20px 0;
+    font-family: "Playball", 'cursive';
+    font-weight: 700;
+    font-size: 28px; 
+    color: rgb(160, 48, 14);
+}
+/* p in schoolFacilitesBoxesChild */
+.schoolFacilitesContainer .schoolFacilitesBoxesChild p{
+    color: rgb(61, 37, 31);
+    opacity: .7;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 10px 0;
+}
+/*  a in schoolFacilitesBoxesChild */
+.schoolFacilitesContainer .schoolFacilitesBoxesChild a{
+    text-decoration: none;
+    opacity: .7;
+    font-size: 22px;
+    font-weight: 500; 
+}
+/* .FacilitesChild1:after */
+.schoolFacilitesContainer .schoolFacilitesBoxesChild:after{
+    content: "";
+    position:absolute ;
+    left: 0px;
+    top: 0;
+    width: 0px;
+    height: 0;
+    background-color: rgba(134, 41, 12, 0.4) ;
+    border-radius: 10px;
+    transition: 1s;
+    
+ }
+/* schoolFacilitesBoxesChild:hover after  */
+.schoolFacilitesContainer .schoolFacilitesBoxesChild:hover:after{
+    width: 100%;
+    height: 100%;
+}
+/* h4 in hover over schoolFacilitesBoxesChild */
+.schoolFacilitesContainer .schoolFacilitesBoxesChild:hover h4{color: rgb(71, 51, 48);}
+
+/* i in hover over schoolFacilitesBoxesChild */
+.schoolFacilitesContainer  .schoolFacilitesBoxesChild:hover i{opacity: 1;}
+    
+    /* p in hover over schoolFacilitesBoxesChild */
+    .schoolFacilitesContainer   .schoolFacilitesBoxesChild:hover p{opacity: 1;}
+   
+    /* a in hover over schoolFacilitesBoxesChild */
+    .schoolFacilitesContainer   .schoolFacilitesBoxesChild:hover a{opacity: 1;}
+    
+
+/* //.,//////////////////////////////////////////../////////////////////// */
+/* photoGallery */
+.photoGallery{
+    padding: 40px 0;
+    background: rgb(253, 245, 243);
+}
+
+.gallaryContainer{
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+    padding: 20px;
+}
+/* .galleryCenterChild */
+.gallaryContainer .galleryCenterChild{margin:0 5%;}
+
+/* galleryChild */
+.gallaryContainer .galleryChild{
+    float: left;
+    width: 30%;
+    height: 250px;
+    position: relative;
+    margin-top: 40px ;
+    border-radius: 10px;
+}
+/* galleryChild img */
+.gallaryContainer .galleryChild img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px; 
+}
+/* .gallery-layer */
+.gallaryContainer .galleryChild .gallery-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:rgba(0, 0, 0,.7);
+    height: 100%;
+    border-radius: 10px; 
+    display: none;
+}
+/* gallery-layer .layer-caption */
+.gallaryContainer .galleryChild .gallery-layer .layer-caption{
+    text-align: center;
+    padding: 40px;
+}
+/*   gallery-layer .layer-caption  h4 */
+.gallaryContainer .galleryChild .gallery-layer .layer-caption h5{
+    font-weight: 700;
+    font-size: 30px;
+    font-family: "Playball", 'cursive'; 
+    padding: 10px 0;
+    color:rgb(179, 138, 132);
+}
+/*   gallery-layer .layer-caption  p */
+.gallaryContainer .galleryChild .gallery-layer .layer-caption p{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 0px 20px;
+    margin-bottom: 20px;
+    Color:white;
+}
+/*   gallery-layer .layer-caption  a */
+.gallaryContainer .galleryChild .gallery-layer .layer-caption a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px  15px;
+    margin: 10px 7px;
+    border-radius: 10px;
+    color:rgb(71, 51, 48);
+    background-color:rgb(179, 138, 132);
+}
+/* visible layer when  hover over .galleryChild  */
+.gallaryContainer .galleryChild:hover .gallery-layer{display: block;}
+/* //////////////////////////////////,//////////////////////////////////////////////////// */
+
+/* activitesDiv */
+.activitesDiv{padding: 40px;}
+
+/* .activityContainer */
+.activitesDiv .activityContainer{ 
+    padding: 40px 0;
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+
+/* activityContainer .activityBoxChild */
+.activitesDiv .activityContainer .activityBoxChild{
+    float: left;
+    width: 30%;
+    padding: 30px;
+    border: 2px solid  rgb(232, 91, 50);
+    border-radius: 10px;
+    position: relative; 
+    margin: 30px 0;
+}
+/* activityContainer .activityBoxChild  ==> CENTER CHILD */
+.activitesDiv .activityContainer .activityBoxChildCenter{margin: 30px 5%  ;}
+/* title & icon */
+.activitesDiv .activityContainer .activityBoxChild h4{
+    padding: 20px 0;
+    font-family: "Playball", 'cursive';
+    font-weight: 700;
+    font-size: 28px; 
+    color: rgb(160, 48, 14);
+      
+}
+/* icon */
+.activitesDiv .activityContainer .activityBoxChild span{
+    color:rgb(232, 91, 50);
+    opacity: .7;
+}
+.activitesDiv .activityContainer .activityBoxChild p{
+    font-size: 20px;
+    opacity: .7;
+}
+/* activityBoxChild:after */
+.activitesDiv .activityContainer .activityBoxChild:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right:0;
+    width: 0; 
+    height: 0;
+    background-color: rgba(134, 41, 12, 0.4);
+    border-radius:10px ;
+    transition: 1s;
+    z-index: -1;
+}
+.activitesDiv .activityContainer .activityBoxChild:hover:after{ 
+    width: 100%;
+     height: 100%;
+    }
+
+     /* title on hover over activityBoxChild  */
+.activitesDiv .activityContainer .activityBoxChild:hover h4{color:rgb(128, 94, 88)  } 
+ /* icon on hover over activityBoxChild  */
+.activitesDiv .activityContainer .activityBoxChild:hover span{opacity: 1;}
+/* p  on hover over activityBoxChild  */
+.activitesDiv .activityContainer .activityBoxChild:hover p{opacity: 1;}
+
+
+
+/* //////////////////////////////////////////////// */
+/* bestCareTakingDiv */
+.bestCareTakingDiv{padding: 40px;}
+
+/* bestCareTakingDiv .container */
+.bestCareTakingDiv .container{
+        width: 90%;
+        margin: 0 auto;
+        overflow: auto
+}
+/* leftDiv */
+.bestCareTakingDiv .container .leftDiv{
+    float:left;
+    width: 50%;
+    padding: 20px;
+}
+/* leftDiv title */
+
+/* special  propetry OF h2 ==>title  bestCareTakingDiv .container .leftDiv */
+.bestCareTakingDiv .container .leftDiv h2{
+padding: 10px 0;
+     text-align: start;
+}
+.bestCareTakingDiv .container .leftDiv h2:after{ left: 50px; }
+
+/* leftDiv p */
+.bestCareTakingDiv .container .leftDiv p{
+    padding: 20px 0; 
+    font-weight: 500;
+    font-size: 22px;
+    color:rgb(94, 62, 55)
+}
+.bestCareTakingDiv .container .leftDiv ul li{
+    list-style: none;
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 20px;
+    color:rgb(77, 48, 41)
+}
+.bestCareTakingDiv .leftDiv ul li span{margin-right: 10px ;}
+
+/* rightDiv */
+.bestCareTakingDiv  .container .rightDiv{
+    width: 50%;
+    float: right;
+    padding: 10px; 
+}
+/* rightDivImg */
+.bestCareTakingDiv .rightDiv .rightDivImg{ height: 400px; }
+/* rightDivImg ==>img */
+.bestCareTakingDiv .rightDiv .rightDivImg img{
+    width: 100%;
+    height: 100%;
+}
+
+/* rightDivDots */
+.bestCareTakingDiv .rightDiv .rightDivDots{
+    width: 20%;
+    margin:20px auto;
+}
+
+/* rightDivDots ul ==>list */
+.bestCareTakingDiv .rightDiv .rightDivDots ul { list-style: none; overflow: auto;}
+
+/* dots */
+.bestCareTakingDiv .rightDiv .rightDivDots li {
+    background-color: rgb(232, 91, 50) ;
+    height: 20px;
+    width: 20px;
+    border-radius:50% ;
+    margin: 0  10px;
+    /* مكنتش راضيه تضبط بالديسبلاي */
+    float: left;
+  
+}
+/* dot 1 */
+.bestCareTakingDiv .rightDiv  .rightDivDots .dot1{background-color: rgb(160, 48, 14);}
+
+
+/* //////////////////////////////////////////////////////////////////////////// */
+/* .advantageDiv */
+.advantageDiv{
+    height: 300px;
+    width: 100%;
+    margin: 100px 0;
+    background: url(../img/teacher-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+   
+}
+/* advantageLayer */
+.advantageDiv .advantageLayer{
+    /* position: relative; */
+    width:100% ;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.2);
+    overflow: auto;
+}
+/* .advantageContainer */
+.advantageLayer .advantageContainer{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%  , -50%); */
+    text-align: center;
+    overflow: auto;
+}
+/* .advantageBox */
+.advantageContainer .advantageBox{
+    padding: 0 30px;
+    float: left;
+}
+/* advantageBox icon */
+.advantageBox i{
+    font-size: 40px;
+    font-weight: 700;
+    padding: 10px;
+    color: rgb(128, 103, 93)
+}
+.advantageBox h4{
+    font-weight: 700;
+    font-size: 30px;
+    font-family: "Playball", 'cursive'; 
+    padding: 10px 0; 
+     color: rgb(100, 28, 9);
+}
+.advantageBox p{
+    font-weight: 500;
+    font-size: 20px;
+    color:rgb(70, 62, 60);
+   
+}
+/* //////////////////////////////////////////// */
+/* pricingDiv */
+.pricingDiv{padding: 40px;}
+
+/* .pricingContainer */
+.pricingDiv .pricingContainer{
+    padding: 40px 0;
+    width: 80%;
+    margin: auto;
+    overflow: auto;
+}
+/* pricingBoxChild */
+.pricingDiv .pricingContainer .pricingBoxChild{
+    float: left;
+    width: 30%;
+    padding: 30px;
+    border: 2px solid  rgb(232, 91, 50);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+/* center div ==> priceChild2 */
+.pricingDiv .pricingContainer .priceChild2{margin: 0 5%;}
+
+/* pricingBoxChild h3 */
+.pricingDiv .pricingContainer .pricingBoxChild h3{
+    padding: 20px 0;
+    font-family: "Playball", 'cursive';
+    font-weight: 700;
+    font-size: 28px; 
+    color:rgb(232, 91, 50)
+}
+/* pricingBoxChild .priceMonth */
+.pricingDiv .pricingContainer .pricingBoxChild .priceMonth{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid rgb(160, 48, 14) ;
+    border-radius: 50%;
+
+}
+/* pricingBoxChild .priceMonth h4 */
+.pricingDiv .pricingContainer .pricingBoxChild .priceMonth h4{
+    font-weight: 600;
+    font-size: 28px; 
+    padding: 0 0 10px;
+}
+/* pricingBoxChild ul */
+.pricingDiv .pricingContainer .pricingBoxChild ul{margin: 20px 0;}
+
+/* pricingBoxChild ul li */
+.pricingDiv .pricingContainer .pricingBoxChild ul li{
+ list-style: none;
+ padding: 5px 0;
+ font-weight: 500;
+ font-size: 24px; 
+}
+/* pricingBoxChild button */
+.pricingDiv .pricingContainer .pricingBoxChild button{
+    padding:  10px 25px ;
+    background-color: rgb(252, 239, 232);
+    border: 1px solid  rgb(241, 149, 121);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px; 
+    color: rgb(160, 48, 14) ;
+    border-radius:10px ;
+}
+
+/* pricingBoxChild:after */
+.pricingDiv .pricingContainer .pricingBoxChild::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right:0;
+    width: 100%; 
+    height: 0;
+    background-color: rgba(134, 41, 12, 0.4);
+    border-radius:10px ;
+    transition: 1s;
+    z-index: -2;
+}
+/* pricingBoxChild:hover:after*/
+.pricingDiv .pricingContainer .pricingBoxChild:hover::after{ height: 100%;}
+/*  h3  hover over pricingBoxChild  */
+.pricingDiv .pricingContainer .pricingBoxChild:hover h3{ color: rgb(160, 48, 14) }
+/*  priceMonth hover over pricingBoxChild  */
+.pricingDiv .pricingContainer .pricingBoxChild:hover .priceMonth{ border:2px solid rgb(232, 91, 50);}
+
+
+
+/* ///////////////////////k /////////////////////////////////////*/
+/* testimonialDiv */
+.testimonialDiv{
+    height: 350px;
+    background-image: url(../img/parallax-01.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* testimoniaLayer */
+.testimonialDiv.testimoniaLayer{
+    width:100% ;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.3);
+    overflow: auto;
+}
+/* .testimonialContainer */
+.testimonialDiv .testimoniaLayer .testimonialContainer{
+    width: 80%;
+    margin:  auto;
+    padding: 40px 0;
+}
+/* testimonialContent */
+.testimonialDiv .testimoniaLayer .testimonialContent{
+    float:left;
+    width: 50%;
+    padding: 40px;
+}
+/*   img & name */
+.testimonialDiv .testimoniaLayer .testimonialContent .img-name{
+    padding: 10px ;
+    overflow: auto;
+   
+}
+/* img div */
+.testimonialDiv .testimoniaLayer .testimonialContent .img-name .img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right:20px ;
+}
+/* img */
+.testimonialDiv .testimoniaLayer .testimonialContent .img-name .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+} 
+/* name & job */
+.testimonialDiv .testimoniaLayer .testimonialContent .img-name .name {padding-top: 20px ;}
+/* name */
+.testimonialDiv .testimoniaLayer .testimonialContent .img-name .name h5{
+    font-family: "Playball", 'cursive';
+    font-weight: 700;
+    font-size: 28px; 
+    color: rgb(100, 28, 9);
+}
+/* job */
+.testimonialDiv .testimoniaLayer .testimonialContent .img-name .name span{
+    font-weight: 600;
+    font-size: 20px; 
+      color:white; 
+}
+/* review */
+.testimonialDiv .testimoniaLayer .testimonialContent p{
+    font-weight: 500;
+    font-size: 20px; 
+    padding: 10px ; 
+    color: rgb(53, 24, 18);
+}
+/* //////////////////////////////////////////////////////////// */
+/* bestStaffDiv */
+.bestStaffDiv{padding: 40px;}
+
+/* bestStaffContainer */
+.bestStaffDiv .bestStaffContainer {
+    width: 85%;
+    margin: 30px auto;
+    padding: 20px 0;
+    overflow: auto;
+}
+/* bestStaffContainer .staffItem  */
+.bestStaffDiv .bestStaffContainer .staffItem {
+    float: left;
+    width: 30%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgb(252, 239, 232);
+    position: relative;
+}
+
+/* bestStaffContainer .staffItem2 ==>center div */
+
+.bestStaffDiv .bestStaffContainer .staffItem2{margin: 0 5%;}
+
+
+/* bestStaffContainer .staffItem .staffItemImg ==>img &layer of icon */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemImg{
+height: 250px;
+position: relative;
+}
+
+/* bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer ==> layer of icon over img */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.3);
+    visibility: hidden;
+}
+/*bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer .staffItemIcons=  ==>icons div  */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer .staffItemIcons{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 60%;
+    background-color: rgb(231, 176, 159);
+}
+/*bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer .staffItemIcons=  ==> list of icons   */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer .staffItemIcons ul li{
+    list-style:none ;
+    text-align: center;
+}
+/*bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer .staffItemIcons=  ==> icons   */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemImg .staffItemImgLayer .staffItemIcons ul li i{
+    line-height: 50px;
+    color: rgb(160, 48, 14);
+}
+
+/*  .bestStaffContainer .staffItem .staffItemName name &job div */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemName{
+    padding: 10px;
+    text-align: center;
+}
+/* bestStaffDiv .bestStaffContainer .staffItem .staffItemName h3 ==>name */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemName h3{
+    padding: 20px;
+    text-transform: capitalize;
+     font-weight: 600;
+     font-size: 30px;
+     color:rgb(232, 91, 50); 
+     font-family: "Playball", 'cursive';
+}
+/* bestStaffDiv .bestStaffContainer .staffItem .staffItemName h3 ==> job name */
+.bestStaffDiv .bestStaffContainer .staffItem .staffItemName p{
+    font-weight: 500;
+     font-size: 20px;
+     color: rgb(100, 28, 9)
+   
+}
+/* .bestStaffContainer .staffItem:after */
+.bestStaffDiv .bestStaffContainer .staffItem:after{
+    content: "";
+    position:absolute ;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(134, 41, 12, 0.4) ;
+    border-radius: 10px;
+    transition: 1s; 
+}
+/* hover & after staffItem  */
+.bestStaffDiv .bestStaffContainer .staffItem:hover:after{
+    width: 100%;
+    height: 100%;  
+}
+/* staffItemImgLayer on hover over staffItem: */
+.bestStaffDiv .bestStaffContainer .staffItem:hover .staffItemImgLayer{visibility: visible;}
+
+/*  h3==>name on hover over staffItem: */
+.bestStaffDiv .bestStaffContainer .staffItem:hover h3{ color: rgb(92, 28, 9)}
+/* p ==>job name on hover over staffItem: */
+.bestStaffDiv .bestStaffContainer .staffItem:hover p{  color:rgb(232, 91, 50); }
+
+
+/* //////////////////////////////////////////////////////// */
+/* Our most popular posts */
+.popularPostsdiv {padding: 40px;}
+
+/* popularPostContainer */
+.popularPostsdiv  .popularPostContainer{
+    width: 85%;
+    margin: auto;
+    overflow: auto;
+    padding: 40px 0;
+}
+/* popularPostContainer   postDiv*/
+.popularPostsdiv  .popularPostContainer .postDiv{
+    width: 30%;
+    float: left;
+    padding: 15px;
+    border: 1px solid  rgb(232, 91, 50);;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+/* popularPostContainer .postDiv2 => center div */
+.popularPostsdiv  .popularPostContainer .postDiv2{margin: 0px 5%;}
+
+/* popularPostContainer postDiv img */
+.popularPostsdiv  .popularPostContainer .postDiv img{
+    width: 90%;
+    height: 80%;
+    border-radius:10px ; 
+}
+
+/* popularPostContainer .postDiv .postInfo  */
+.popularPostsdiv  .popularPostContainer .postDiv .postInfo {padding: 10px 0;}
+
+/* popularPostContainer .postDiv .postInfo ul li */
+.popularPostsdiv  .popularPostContainer .postDiv .postInfo ul li{
+    list-style: none;
+    display: inline;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 5px;
+    color:rgb(105, 98, 96)
+    /* color:rgb(105, 39, 21) ; */
+}
+/* li icon  */
+.popularPostsdiv  .popularPostContainer .postDiv .postInfo ul li span{ 
+    color:rgb(232, 91, 50);
+    margin-right: 3px;
+  }
+
+  /*  .popularPostContainer .postDiv .postInfo  h4 ==>title */
+  .popularPostsdiv  .popularPostContainer .postDiv .postInfo h4{
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 24px;
+     color: rgb(100, 28, 9);
+    font-family: "Playball", 'cursive';
+  } 
+  /* popularPostContainer .postDiv .postInfo p */
+   .popularPostsdiv  .popularPostContainer .postDiv .postInfo p{
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 20px;
+    color:rgb(112, 103, 101)
+  }
+  .popularPostsdiv  .popularPostContainer .postDiv .postInfo a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    color:rgb(43, 21, 14);;
+  
+  }
+  /* after  postDiv */
+  .popularPostsdiv  .popularPostContainer .postDiv::after{ 
+    content: "";
+    position:absolute ;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 0;
+    /* background-color: rgba(134, 41, 12, 0.4); */
+    background-color: rgb(231, 176, 159);
+    border-radius: 10px;
+    transition: 1s; 
+    z-index: -1;
+  
+}
+/* hover after */
+.popularPostsdiv  .popularPostContainer .postDiv:hover::after{height: 100%;}
+/* li in hover on postdiv */
+.popularPostsdiv  .popularPostContainer .postDiv:hover .postInfo li{color:rgb(80, 29, 18)}
+/* h4 in hover on postdiv */
+.popularPostsdiv  .popularPostContainer .postDiv:hover h4{  color: rgb(232, 91, 50);}
+/* p in hover on postdiv */
+.popularPostsdiv  .popularPostContainer .postDiv:hover p{  color: rgb(65, 28, 18);}
+
+
+/* /////////////////////////////////////////// */
+/* footer */
+.footer{
+    background-color:rgb(207, 174, 163);
+    padding: 30px;
+}
+.footer .footerContainer{
+    width:60% ;
+    margin: auto;
+    text-align: center;
+
+}
+.footer .footerContainer .footerImg{
+    border-radius: 10px;
+    width: 30%;
+    height: 200px;
+    margin: auto;
+}
+.footer .footerContainer .footerImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.footer .footerContainer .footerIcon{
+    margin: 20px 0;
+    padding: 15px 0 10px;
+    text-align: center;
+}
+.footer .footerContainer .footerIcon ul li{
+    list-style: none;
+    display: inline;
+    padding:  20px;
+    font-weight: 600;
+    font-size: 24px;
+    background-color:rgb(68, 41, 32) ;
+    color:rgb(196, 176, 171);
+    border-radius: 50%;
+    opacity: .6;
+    transition: .4s;
+
+}
+.footer .footerContainer .footerIcon ul li:hover{  opacity: 1;}
+
+.footer .footerContainer p{
+    font-weight: 500;
+    font-size: 20px;
+    color:rgb(71, 58, 53)
+}
