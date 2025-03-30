@@ -87,6 +87,7 @@ padding: 0 30px;
 .nav-right .main-list li:hover::after{
     width: 100%;
     right: 0px;
+
 }
 
 /* neasted-list */
@@ -510,7 +511,8 @@ padding: 10px 0;
 }
 /* dot 1 */
 .bestCareTakingDiv .rightDiv  .rightDivDots .dot1{background-color: rgb(160, 48, 14);}
-
+/* bg change in hover */
+.bestCareTakingDiv .rightDiv .rightDivDots li:hover{background-color: rgb(160, 48, 14);}
 
 /* //////////////////////////////////////////////////////////////////////////// */
 /* .advantageDiv */
@@ -826,10 +828,8 @@ position: relative;
     transition: 1s; 
 }
 /* hover & after staffItem  */
-.bestStaffDiv .bestStaffContainer .staffItem:hover:after{
-    width: 100%;
-    height: 100%;  
-}
+.bestStaffDiv .bestStaffContainer .staffItem:hover:after{ height: 100%;  }
+
 /* staffItemImgLayer on hover over staffItem: */
 .bestStaffDiv .bestStaffContainer .staffItem:hover .staffItemImgLayer{visibility: visible;}
 
